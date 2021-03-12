@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Goodbye</title>
+    <title>Goodbye page</title>
 </head>
 <body>
-<h3>Goodbye page!</h3>
+<h4 th:text="${message}"></h4>
+<br>
 <a href="/first/hello?firstName=Nappy&lastName=Poopa">Link to hello page</a><br/>
 <a href="/hello-world">Link to hello-world page</a>
 </body>
