@@ -9,15 +9,7 @@ import java.util.List;
 @Component
 public class PersonDAO {
     private static int ID;
-    private List<Person> personList;
-
-    public PersonDAO() {
-        personList = new ArrayList<>();
-        personList.add(new Person(++ID, "Tom"));
-        personList.add(new Person(++ID, "Jenn"));
-        personList.add(new Person(++ID, "Edie"));
-        personList.add(new Person(++ID, "Anna"));
-    }
+    private final List<Person> personList = new ArrayList<>();
 
     public Person index(int id){
         for (Person person:personList) {
@@ -31,5 +23,10 @@ public class PersonDAO {
 
     public List<Person> show(){
         return personList;
+    }
+
+    public void save(Person person){
+        person.setId(++ID);
+        personList.add(person);
     }
 }
