@@ -5,7 +5,8 @@
     <title>Person's page</title>
 </head>
 <body>
-    <h4 th:text="${person.getName()}"></h4>
+    <h4 th:text="${person.getName() + ', ' + person.getAge()}"></h4>
+    <h4 th:text="${person.getEmail()}"></h4>
     <a th:href="@{/people/{id}/edit(id=${person.getId()})}">Edit</a>
     <form th:method="DELETE" th:action="@{/people/{id}/(id=${person.getId()})}">
         <input type="submit" value="Delete">

@@ -33,6 +33,8 @@ public class PersonDAO {
     public void update(int id, Person person){
         Person personToBeUpdated = index(id);
         personToBeUpdated.setName(person.getName());
+        personToBeUpdated.setAge(person.getAge());
+        personToBeUpdated.setEmail(person.getEmail());
     }
     public void delete(int id){
         Person person = index(id);
